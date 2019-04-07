@@ -25,3 +25,7 @@
     background: #FFFFFF;
     border-bottom: none;
   }
+  .header{
+    height: 36px;
+    background: #000;
+  }

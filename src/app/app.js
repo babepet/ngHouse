@@ -1,5 +1,17 @@
-var angular = require('angular');//引入angular
-var ngModule = angular.module('app',[]);//定义一个angular模块
-//require('./directives/hello-world/hello-world.js')(ngModule);//引入指令(directive)文件
-//require('./css/style.css');//引入样式文件
-var i;
+import "../assets/css/main.css"
+import "../assets/css/layout.css"
+import "angular"
+import "@uirouter/angularjs"
+
+"use strict";
+var app = angular.module('myApp',['ui.router']);
+app.config(function ($stateProvider, $urlRouterProvider) {
+    //一级默认
+    $urlRouterProvider.otherwise('/home'); 
+    $stateProvider
+        .state('home',{
+            name:'home',
+            url:'/home',
+            template:'<p>hello</p>'
+        })
+});
